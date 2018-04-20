@@ -1,6 +1,7 @@
 package com.example.android.miwok;
 
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Word> {
     private int mResourceColorId;
+//    private MediaPlayer mMedisPlayer;
     public WordAdapter(@NonNull Context context, ArrayList<Word> words, int resourceColorId) {
         super(context, 0, words);
         this.mResourceColorId = resourceColorId;
@@ -49,6 +51,13 @@ public class WordAdapter extends ArrayAdapter<Word> {
             // Otherwise hide the ImageView (set visibility to GONE)
             img.setVisibility(View.GONE);
         }
+
+//        textContainer.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
         return listItemView;
     }
 }
